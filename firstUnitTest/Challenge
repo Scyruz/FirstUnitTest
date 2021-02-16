@@ -1,0 +1,28 @@
+1.    What is the output of each method in the console?
+        setup(): BeforeAll - executes before all test mehtods in this class
+        init(): BeforeEach - executes before each test mehtod in this class
+        simpleTest(): simple test
+        otherSimpleTest(): other simple test
+        notImplementedTest(): (nothing)
+        tearDown(): AfterEach - executed after each test method
+        done(): AfterAll - executed after all test methods
+        
+2.    What is the difference between the setup and init methods?
+        setup is executed even before performing dependency injection for test context,
+        while init executes everytime before a method in the class.
+        
+3.    Give an example of when you can use init and tearDown methods
+        If I´m looking for something weird that is happening in an application but I really don´t know what it is,
+        this methods would be useful to find where is the strange thing going on.
+        
+4.    What is @Disabled used for?
+        To skip testing a method.
+        
+5.    What is the difference and pros/cons of using Maven Test and Junit Test options?
+        Maven test: It displays the results in the console
+          Pros: It gives more details about the methods and hoe the program runs
+          Cons: Test cases are not allowed to access test classes or resources from other projects
+        
+        Junit Test: It shows when all methods are tested and how many seconds each one lasted running
+          Pros: It iss useful to know the time taken to process each method in order to compare and improve the program
+          Cons: It does not give more information further than if the test could be completed or not.
